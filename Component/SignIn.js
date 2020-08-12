@@ -35,55 +35,53 @@ const SignIn = props => {
     };
 
     return (
-        <View style={styles.mainBody}>
-            <ScrollView keyboardShouldPersistTaps="handled">
-                <View style={styles.SectionStyle}>
-                    <Label text="Email" />
-                    <TextInput
-                        style={styles.inputStyle}
-                        onChangeText={UserEmail => setUserEmail(UserEmail)}
-                        underlineColorAndroid="#FFFFFF"
-                        placeholder="your@address.net"
-                        placeholderTextColor="#F6F6F7"
-                        autoCapitalize="none"
-                        keyboardType="email-address"
-                        ref={ref => {
-                            this._emailinput = ref;
-                        }}
-                        returnKeyType="next"
-                        onSubmitEditing={() =>
-                            this._passwordinput && this._passwordinput.focus()
-                        }
-                        blurOnSubmit={false}
-                    />
-                </View>
-                <View style={styles.SectionStyle}>
-                    <Label text="Password" />
-                    <TextInput
-                        style={styles.inputStyle}
-                        onChangeText={UserPassword => setUserPassword(UserPassword)}
-                        underlineColorAndroid="#FFFFFF"
-                        placeholder="**********"
-                        placeholderTextColor="#F6F6F7"
-                        keyboardType="default"
-                        ref={ref => {
-                            this._passwordinput = ref;
-                        }}
-                        onSubmitEditing={Keyboard.dismiss}
-                        blurOnSubmit={false}
-                        secureTextEntry={true}
-                    />
-                </View>
-                {errortext != '' ? (
-                    <Text style={styles.errorTextStyle}> {errortext} </Text>
-                ) : null}
-                <TouchableOpacity
-                    style={styles.buttonStyle}
-                    activeOpacity={0.5}
-                    onPress={handleSubmitPress}>
-                    <Text style={styles.buttonTextStyle}>Sign-In</Text>
-                </TouchableOpacity>
-            </ScrollView>
+        <View style={styles.mainBody} keyboardShouldPersistTaps="handled">
+            <View style={styles.SectionStyle}>
+                <Label text="Email" />
+                <TextInput
+                    style={styles.inputStyle}
+                    onChangeText={UserEmail => setUserEmail(UserEmail)}
+                    underlineColorAndroid="#FFFFFF"
+                    placeholder="your@address.net"
+                    placeholderTextColor="#F6F6F7"
+                    autoCapitalize="none"
+                    keyboardType="email-address"
+                    ref={ref => {
+                        this._emailinput = ref;
+                    }}
+                    returnKeyType="next"
+                    onSubmitEditing={() =>
+                        this._passwordinput && this._passwordinput.focus()
+                    }
+                    blurOnSubmit={false}
+                />
+            </View>
+            <View style={styles.SectionStyle}>
+                <Label text="Password" />
+                <TextInput
+                    style={styles.inputStyle}
+                    onChangeText={UserPassword => setUserPassword(UserPassword)}
+                    underlineColorAndroid="#FFFFFF"
+                    placeholder="**********"
+                    placeholderTextColor="#F6F6F7"
+                    keyboardType="default"
+                    ref={ref => {
+                        this._passwordinput = ref;
+                    }}
+                    onSubmitEditing={Keyboard.dismiss}
+                    blurOnSubmit={false}
+                    secureTextEntry={true}
+                />
+            </View>
+            {errortext != '' ? (
+                <Text style={styles.errorTextStyle}> {errortext} </Text>
+            ) : null}
+            <TouchableOpacity
+                style={styles.buttonStyle}
+                activeOpacity={0.5}
+                onPress={handleSubmitPress}>
+                <Text style={styles.buttonTextStyle}>Sign-In</Text>
+            </TouchableOpacity>
         </View>
     );
 };
