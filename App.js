@@ -1,7 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import SignIn from './Components/SignIn';
 
-const Auth = createStackNavigator({
+const AppNavigator = createStackNavigator({
   SignIn: {
     screen: SignIn,
     navigationOptions: {
