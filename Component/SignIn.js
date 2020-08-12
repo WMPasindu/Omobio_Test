@@ -124,6 +124,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 30,
         borderColor: 'white',
+        alignItems: 'right',
     },
     errorTextStyle: {
         color: 'red',
