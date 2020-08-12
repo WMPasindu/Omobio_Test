@@ -63,7 +63,7 @@ const SignIn = props => {
                         style={styles.inputStyle}
                         onChangeText={UserPassword => setUserPassword(UserPassword)}
                         underlineColorAndroid="#FFFFFF"
-                        placeholder="Password"
+                        placeholder="**********"
                         placeholderTextColor="#F6F6F7"
                         keyboardType="default"
                         ref={ref => {
